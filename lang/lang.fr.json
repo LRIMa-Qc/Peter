@@ -1,0 +1,331 @@
+{
+    "data": {
+        "displayEmbeds": {
+            "welcome": {
+                "title": "Merci d'utiliser {{COM:bot.name}} !",
+                "description": [
+                    "{{REF:bot.description}}"
+                ],
+                "fields": [
+                    {
+                        "name": "Important - {{REF:fields.commands}}",
+                        "value": [
+                            "{{CMD_LINK_HELP}} - {{REF:commandDescs.help}}"
+                        ]
+                    },
+                    {
+                        "name": "{{REF:fields.links}}",
+                        "value": [
+                            "{{REF:links.docsEmbed}}",
+                            "{{REF:links.supportEmbed}}"
+                        ]
+                    }
+                ]
+            },
+            "helpContactSupport": {
+                "title": "Aide - {{REF:helpOptions.contactSupport}}",
+                "description": [
+                    "Vous avez une question ou un commentaire ? Rejoignez notre serveur d'assistance grâce au lien ci-dessous !"
+                ],
+                "fields": [
+                    {
+                        "name": "{{REF:fields.links}}",
+                        "value": [
+                            "{{REF:links.supportEmbed}}"
+                        ]
+                    }
+                ]
+            },
+            "helpCommands": {
+                "title": "Aide - {{REF:helpOptions.commands}}",
+                "fields": [
+                    {
+                        "name": "Commandes",
+                        "value": [
+                            "Pour afficher les commandes disponibles, tapez simplement `/` puis sélectionnez le bot dans la liste de gauche. Vous pourrez ensuite parcourir toutes les commandes disponibles. Certaines commandes peuvent être masquées si vous ne disposez pas des autorisations nécessaires.",
+                            "",
+                            "{{CMD_LINK_TEST}} - {{REF:commandDescs.test}}",
+                            "{{CMD_LINK_INFO}} - {{REF:commandDescs.info}}"
+                        ]
+                    },
+                    {
+                        "name": "Autorisations des commandes",
+                        "value": [
+                            "Vous souhaitez limiter certaines commandes à des rôles, utilisateurs ou salons spécifiques ? Configurez les autorisations dans la page d'intégration du bot en allant dans **Paramètres du serveur** > **Intégrations**, puis **Gérer** pour ce bot."
+                        ]
+                    },
+                    {
+                        "name": "{{REF:fields.links}}",
+                        "value": [
+                            "{{REF:links.docsEmbed}}",
+                            "{{REF:links.supportEmbed}}"
+                        ]
+                    }
+                ]
+            },
+            "test": {
+                "description": "La commande de test fonctionne !"
+            },
+            "viewDateJoined": {
+                "description": "{{TARGET}} a rejoint le serveur le {{DATE}} !"
+            },
+            "viewDateSent": {
+                "description": "Ce message a été envoyé le {{DATE}} !"
+            },
+            "about": {
+                "title": "{{COM:bot.name}} - À propos",
+                "description": "{{REF:bot.description}}",
+                "fields": [
+                    {
+                        "name": "Auteur",
+                        "value": "{{REF:links.authorEmbed}}"
+                    },
+                    {
+                        "name": "{{REF:fields.links}}",
+                        "value": [
+                            "{{REF:links.sourceEmbed}}",
+                            "{{REF:links.docsEmbed}}",
+                            "{{REF:links.termsEmbed}}",
+                            "{{REF:links.voteEmbed}}",
+                            "{{REF:links.donateEmbed}}",
+                            "{{REF:links.supportEmbed}}",
+                            "{{REF:links.inviteEmbed}}"
+                        ]
+                    },
+                    {
+                        "name": "Créé avec",
+                        "value": [
+                            "{{REF:links.templateEmbed}}"
+                        ]
+                    }
+                ]
+            },
+            "translate": {
+                "title": "{{COM:bot.name}} - Traductions",
+                "description": "Merci à nos traducteurs qui ont permis à {{COM:bot.name}} d'être utilisé dans les langues suivantes. Si vous souhaitez contribuer à une traduction, veuillez contacter l'équipe sur notre [serveur d'assistance]({{COM:links.support}})."
+            },
+            "devInfo": {
+                "title": "{{COM:bot.name}} - Informations développeur",
+                "fields": [
+                    {
+                        "name": "Versions",
+                        "value": [
+                            "**Node.js** : {{NODE_VERSION}}",
+                            "**TypeScript** : {{TS_VERSION}}",
+                            "**ECMAScript** : {{ES_VERSION}}",
+                            "**discord.js** : {{DJS_VERSION}}"
+                        ]
+                    },
+                    {
+                        "name": "Statistiques",
+                        "value": [
+                            "**Shards** : {{SHARD_COUNT}}",
+                            "**Serveurs** : {{SERVER_COUNT}} ({{SERVER_COUNT_PER_SHARD}}/Shard)"
+                        ]
+                    },
+                    {
+                        "name": "Mémoire",
+                        "value": [
+                            "**RSS** : {{RSS_SIZE}} ({{RSS_SIZE_PER_SERVER}}/Serveur)",
+                            "**Tas (Heap)** : {{HEAP_TOTAL_SIZE}} ({{HEAP_TOTAL_SIZE_PER_SERVER}}/Serveur)",
+                            "**Utilisée** : {{HEAP_USED_SIZE}} ({{HEAP_USED_SIZE_PER_SERVER}}/Serveur)"
+                        ]
+                    },
+                    {
+                        "name": "Identifiants",
+                        "value": [
+                            "**Nom d'hôte** : {{HOSTNAME}}",
+                            "**ID du shard** : {{SHARD_ID}}",
+                            "**ID du serveur** : {{SERVER_ID}}",
+                            "**ID du bot** : {{BOT_ID}}",
+                            "**ID de l'utilisateur** : {{USER_ID}}"
+                        ]
+                    }
+                ]
+            }
+        },
+        "validationEmbeds": {
+            "cooldownHit": {
+                "description": "Vous ne pouvez exécuter cette commande que {{AMOUNT}} fois toutes les {{INTERVAL}}. Veuillez patienter avant de réessayer.",
+                "color": "{{COM:colors.warning}}"
+            },
+            "devOnly": {
+                "description": "Cette action est réservée aux développeurs.",
+                "color": "{{COM:colors.warning}}"
+            },
+            "missingClientPerms": {
+                "description": [
+                    "Je ne dispose pas de toutes les autorisations nécessaires pour exécuter cette commande ici ! Veuillez vérifier les autorisations du serveur et du salon afin de vous assurer que je possède les autorisations suivantes.",
+                    "",
+                    "Autorisations requises : {{PERMISSIONS}}"
+                ],
+                "color": "{{COM:colors.warning}}"
+            }
+        },
+        "errorEmbeds": {
+            "command": {
+                "description": "Une erreur est survenue !",
+                "fields": [
+                    {
+                        "name": "Code d'erreur",
+                        "value": "{{ERROR_CODE}}"
+                    },
+                    {
+                        "name": "ID du serveur",
+                        "value": "{{GUILD_ID}}"
+                    },
+                    {
+                        "name": "ID du shard",
+                        "value": "{{SHARD_ID}}"
+                    },
+                    {
+                        "name": "Contacter l'assistance",
+                        "value": "{{COM:links.support}}"
+                    }
+                ],
+                "color": "{{COM:colors.error}}"
+            },
+            "startupInProcess": {
+                "description": "{{COM:bot.name}} est encore en cours de démarrage. Veuillez réessayer plus tard.",
+                "color": "{{COM:colors.warning}}"
+            },
+            "notImplemented": {
+                "description": "Cette fonctionnalité n'a pas encore été implémentée !",
+                "color": "{{COM:colors.warning}}"
+            }
+        },
+        "channelRegexes": {
+            "bot": "/bot|commande|cmd/i"
+        }
+    },
+    "refs": {
+        "meta": {
+            "translators": "[NomDuTraducteur#1234](https://github.com/)"
+        },
+        "bot": {
+            "description": "{{REF:links.templateEmbed}} offre aux développeurs une base solide pour créer de nouveaux bots Discord, évitant ainsi une grande partie de la configuration initiale afin qu'ils puissent se concentrer sur les fonctionnalités importantes de leur bot."
+        },
+        "chatCommands": {
+            "dev": "dev",
+            "help": "aide",
+            "info": "info",
+            "test": "test",
+            "status": "status"
+        },
+        "userCommands": {
+            "viewDateJoined": "Voir la date d'arrivée"
+        },
+        "messageCommands": {
+            "viewDateSent": "Voir la date d'envoi"
+        },
+        "arguments": {
+            "command": "commande",
+            "option": "option"
+        },
+        "commandDescs": {
+            "dev": "Réservé aux développeurs.",
+            "help": "Obtenir de l'aide ou contacter l'assistance.",
+            "info": "Afficher les informations du bot.",
+            "test": "Exécuter la commande de test."
+        },
+        "argDescs": {
+            "devCommand": "Commande.",
+            "helpOption": "Option.",
+            "infoOption": "Option."
+        },
+        "fields": {
+            "commands": "Commandes",
+            "links": "Liens"
+        },
+        "permissions": {
+            "AddReactions": "Ajouter des réactions",
+            "Administrator": "Administrateur",
+            "AttachFiles": "Joindre des fichiers",
+            "BanMembers": "Bannir des membres",
+            "ChangeNickname": "Modifier le surnom",
+            "Connect": "Se connecter",
+            "CreateEvents": "Créer des événements",
+            "CreateGuildExpressions": "Créer des expressions",
+            "CreateInstantInvite": "Créer une invitation",
+            "CreatePrivateThreads": "Créer des fils privés",
+            "CreatePublicThreads": "Créer des fils publics",
+            "DeafenMembers": "Rendre sourd",
+            "EmbedLinks": "Intégrer des liens",
+            "KickMembers": "Expulser des membres",
+            "ManageChannels": "Gérer les salons",
+            "ManageEmojisAndStickers": "Gérer les émojis et autocollants",
+            "ManageEvents": "Gérer les événements",
+            "ManageGuild": "Gérer le serveur",
+            "ManageGuildExpressions": "Gérer les expressions",
+            "ManageMessages": "Gérer les messages",
+            "ManageNicknames": "Gérer les surnoms",
+            "ManageRoles": "Gérer les rôles et permissions",
+            "ManageThreads": "Gérer les fils de discussion",
+            "ManageWebhooks": "Gérer les webhooks",
+            "MentionEveryone": "Mentionner @everyone, @here et tous les rôles",
+            "ModerateMembers": "Mettre des membres en délai d'attente",
+            "MoveMembers": "Déplacer des membres",
+            "MuteMembers": "Rendre muet",
+            "PinMessages": "Épingler des messages",
+            "PrioritySpeaker": "Orateur prioritaire",
+            "ReadMessageHistory": "Lire l'historique des messages",
+            "RequestToSpeak": "Demander la parole",
+            "SendMessages": "Envoyer des messages / Créer des publications",
+            "SendMessagesInThreads": "Envoyer des messages dans les fils",
+            "SendPolls": "Créer des sondages",
+            "SendTTSMessages": "Envoyer des messages texte-à-parole",
+            "SendVoiceMessages": "Envoyer des messages vocaux",
+            "Speak": "Parler",
+            "Stream": "Diffuser une vidéo",
+            "UseApplicationCommands": "Utiliser les commandes d'application",
+            "UseEmbeddedActivities": "Utiliser les activités",
+            "UseExternalApps": "Utiliser des applications externes",
+            "UseExternalEmojis": "Utiliser des émojis externes",
+            "UseExternalSounds": "Utiliser des sons externes",
+            "UseExternalStickers": "Utiliser des autocollants externes",
+            "UseSoundboard": "Utiliser le panneau de sons",
+            "UseVAD": "Utiliser la détection d'activité vocale",
+            "ViewAuditLog": "Voir le journal d'audit",
+            "ViewChannel": "Voir les salons",
+            "ViewCreatorMonetizationAnalytics": "Voir les statistiques des abonnements au serveur",
+            "ViewGuildInsights": "Voir les statistiques du serveur"
+        },
+        "devCommandNames": {
+            "info": "info"
+        },
+        "helpOptions": {
+            "contactSupport": "Contacter l'assistance",
+            "commands": "Commandes"
+        },
+        "helpOptionDescs": {
+            "contactSupport": "❓ {{REF:helpOptions.contactSupport}} ❓",
+            "commands": "{{REF:helpOptions.commands}} — Quelles commandes sont disponibles ? Comment limiter leur utilisation ?"
+        },
+        "infoOptions": {
+            "about": "À propos",
+            "translate": "Traduire"
+        },
+        "yesNo": {
+            "yes": "Oui",
+            "no": "Non"
+        },
+        "boolean": {
+            "true": "Vrai",
+            "false": "Faux"
+        },
+        "other": {
+            "na": "N/D"
+        },
+        "links": {
+            "authorEmbed": "[{{COM:bot.author}}]({{COM:links.author}})",
+            "docsEmbed": "[Consulter la documentation]({{COM:links.docs}})",
+            "donateEmbed": "[Faire un don via PayPal]({{COM:links.donate}})",
+            "inviteEmbed": "[Inviter {{COM:bot.name}} sur un serveur !]({{COM:links.invite}})",
+            "sourceEmbed": "[Voir le code source]({{COM:links.source}})",
+            "supportEmbed": "[Rejoindre le serveur d'assistance]({{COM:links.support}})",
+            "templateEmbed": "[Modèle TypeScript de bot Discord]({{COM:links.template}})",
+            "termsEmbed": "[Consulter les conditions d'utilisation]({{COM:links.terms}})",
+            "voteEmbed": "[Voter pour {{COM:bot.name}} !]({{COM:links.vote}})"
+        }
+    }
+}

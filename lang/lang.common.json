@@ -1,0 +1,26 @@
+{
+    "bot": {
+        "name": "Peter Greffin",
+        "author": "Samy Rahmani"
+    },
+    "emojis": {
+        "yes": "✅",
+        "no": "❌",
+        "enabled": "🟢",
+        "disabled": "🔴",
+        "info": "ℹ️",
+        "warning": "⚠️",
+        "previous": "◀️",
+        "next": "▶️",
+        "first": "⏪",
+        "last": "⏩",
+        "refresh": "🔄"
+    },
+    "colors": {
+        "default": "#0099ff",
+        "success": "#00ff83",
+        "warning": "#ffcc66",
+        "error": "#ff4a4a"
+    },
+    "links": {}
+}
