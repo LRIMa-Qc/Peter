@@ -12,21 +12,44 @@ interface Item {
 }
 
 export class StatusCommand implements Command {
-    public names = ["status"];
+    public names = ['status'];
     public cooldown = new RateLimiter(1, 1000);
     public deferType = CommandDeferType.HIDDEN;
     public requireClientPerms: PermissionsString[] = [];
 
     public async execute(intr: ChatInputCommandInteraction, data: EventData): Promise<void> {
-        const message = await intr.channel.send("Récupération des données...");
-        const content = await (await fetch("https://culture.lrima.ca/uptime")).json() as Item[] | null;
+        const message = await intr.channel.send('Récupération des données...');
+        const content = (await (await fetch('https://culture.lrima.ca/uptime')).json()) as
+            | Item[]
+            | null;
         if (!content) {
-            message.edit("Impossible de récupérer les données. Il se peut que le server soit down.")
+            message.edit(
+                'Impossible de récupérer les données. Il se peut que le server soit down.'
+            );
             return;
         }
-        const item_answers = content.map(item => `- ${item.service}: ${item.is_alive ? `✅ En marche (Uptime: *${item.uptime}*)` : "❌ Pas en vie"}`);
-        const header = "**États des services**: \n";
-        message.edit(header + item_answers.join("\n"));
-        InteractionUtils.send(intr, "Données envoyées");
+
+        try {
+            const lrimaData = await (await fetch('https://lrima.ca/api/healthz')).json();
+            content.push({
+                is_alive: lrimaData.status === 'pass',
+                service: 'lrima.ca',
+                uptime: 'N/A',
+            });
+        } catch (error) {
+            content.push({
+                is_alive: false,
+                service: 'lrima.ca',
+                uptime: 'N/A',
+            });
+        }
+
+        const item_answers = content.map(
+            item =>
+                `- ${item.service}: ${item.is_alive ? `✅ En marche (Uptime: *${item.uptime}*)` : '❌ Pas en vie'}`
+        );
+        const header = '**États des services**: \n';
+        message.edit(header + item_answers.join('\n'));
+        InteractionUtils.send(intr, 'Données envoyées');
     }
 }
