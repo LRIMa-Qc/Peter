@@ -30,7 +30,11 @@ export class StatusCommand implements Command {
         }
 
         try {
-            const lrimaData = await (await fetch('https://lrima.ca/api/healthz')).json();
+            const lrimaData = await (await fetch('https://lrima.ca/api/healthz')).json() as {
+                status: string;
+                details: object;
+            };
+
             content.push({
                 is_alive: lrimaData.status === 'pass',
                 service: 'lrima.ca',
