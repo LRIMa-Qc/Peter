@@ -38,13 +38,13 @@ export class StatusCommand implements Command {
             content.push({
                 is_alive: lrimaData.status === 'pass',
                 service: 'lrima.ca',
-                uptime: 'N/A',
+                uptime: lrimaData.uptime,
             });
         } catch (error) {
             content.push({
                 is_alive: false,
                 service: 'lrima.ca',
-                uptime: 'N/A',
+                uptime: '0s',
             });
         }
 
