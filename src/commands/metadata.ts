@@ -21,6 +21,14 @@ export const ChatCommandMetadata: {
         dm_permission: true,
         default_member_permissions: undefined,
     },
+    SERRE: {
+        type: ApplicationCommandType.ChatInput,
+        name: 'serre',
+        description: Lang.getRef('commandDescs.serre', Language.Default),
+        description_localizations: Lang.getRefLocalizationMap('commandDescs.serre'),
+        dm_permission: true,
+        default_member_permissions: undefined,
+    },
 };
 
 export const MessageCommandMetadata: {

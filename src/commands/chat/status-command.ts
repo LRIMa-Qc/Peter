@@ -33,6 +33,7 @@ export class StatusCommand implements Command {
             const lrimaData = await (await fetch('https://lrima.ca/api/healthz')).json() as {
                 status: string;
                 details: object;
+                uptime: string;
             };
 
             content.push({

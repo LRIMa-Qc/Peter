@@ -226,7 +226,8 @@
             "dev": "Réservé aux développeurs.",
             "help": "Obtenir de l'aide ou contacter l'assistance.",
             "info": "Afficher les informations du bot.",
-            "test": "Exécuter la commande de test."
+            "test": "Exécuter la commande de test.",
+            "serre": "Afficher le dernier arrosage de la serre."
         },
         "argDescs": {
             "devCommand": "Commande.",

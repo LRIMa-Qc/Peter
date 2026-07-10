@@ -2,8 +2,8 @@ import { REST } from '@discordjs/rest';
 import { Options, Partials } from 'discord.js';
 import { createRequire } from 'node:module';
 
-import { Button } from './buttons/index.js';
-import { StatusCommand } from './commands/chat/index.js';
+import { Button, ResetGreenhouseButton, WaterGreenhouseButton } from './buttons/index.js';
+import { SerreCommand, StatusCommand } from './commands/chat/index.js';
 import {
     ChatCommandMetadata,
     Command,
@@ -55,11 +55,13 @@ async function start(): Promise<void> {
     // Commands
     let commands: Command[] = [
         new StatusCommand(),
+        new SerreCommand(),
     ];
 
     // Buttons
     let buttons: Button[] = [
-        // TODO: Add new buttons here
+        new WaterGreenhouseButton(),
+        new ResetGreenhouseButton(),
     ];
 
     // Reactions
